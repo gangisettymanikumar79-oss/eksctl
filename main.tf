@@ -64,11 +64,7 @@ resource "terraform_data" "cluster_destroy" {
     password = var.ssh_password
   }
 
-<<<<<<< HEAD
   provisioner "remote-exec" {
-=======
-provisioner "remote-exec" {
->>>>>>> d29970f (add eksctl terraform config)
     when = destroy
     inline = [
       "eksctl delete cluster -f /home/ec2-user/eksctl/eksctl.yaml --wait"
@@ -82,6 +78,8 @@ provisioner "remote-exec" {
     }
   }
 }
+
+
 
 
 
