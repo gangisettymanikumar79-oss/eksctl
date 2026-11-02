@@ -5,7 +5,7 @@ resource "aws_instance" "workstation" {
   user_data = templatefile("workstation.sh.tftpl", {
     aws_access_key = var.aws_access_key
     aws_secret_key = var.aws_secret_key
-  })
+  })   ##/var/log/cloud-init-*
 
   root_block_device {
     volume_size = 50
